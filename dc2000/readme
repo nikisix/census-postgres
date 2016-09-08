@@ -1,1 +1,2 @@
 download and runall script in ../../census-postgres-scripts repo
+must download each state individually and add it to the national file b/c the national file doesn't have all of the info in it.
