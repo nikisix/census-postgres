@@ -3,9 +3,12 @@
 --dc2000 meta_sf3
 --dc2000 sf3geo
 --dc2000 sf3geo_dictionary
+
 create unique index dc2000_geosf1_idx on dc2000.geosf1 (stusab, logrecno);
+create index dc2000_geosf1_geoid_idx on dc2000.geosf1 (geoid);
 create index dc2000_geosf1_geocomp_idx on dc2000.geosf1 (geocomp);
 create index dc2000_geosf1_sumlev_idx on dc2000.geosf1 (sumlev);
+
 create unique index dc2000_sf10001_idx on dc2000.sf10001 (stusab, logrecno);
 create unique index dc2000_sf10002_idx on dc2000.sf10002 (stusab, logrecno);
 create unique index dc2000_sf10003_idx on dc2000.sf10003 (stusab, logrecno);
@@ -46,9 +49,11 @@ create unique index dc2000_sf10037_idx on dc2000.sf10037 (stusab, logrecno);
 create unique index dc2000_sf10038_idx on dc2000.sf10038 (stusab, logrecno);
 create unique index dc2000_sf10039_idx on dc2000.sf10039 (stusab, logrecno);
 
-create unique index dc2000_sf1geo_idx on dc2000.sf1geo (stusab, logrecno);
-create unique index dc2000_sf1geo_geocomp_idx on dc2000.sf1geo (geocomp);
-create unique index dc2000_sf1geo_sumlev_idx on dc2000.sf1geo (sumlev);
+create unique index dc2000_geosf3_idx on dc2000.geosf3 (stusab, logrecno);
+create index dc2000_geosf3_geoid_idx on dc2000.geosf3 (geoid);
+create index dc2000_geosf3_geocomp_idx on dc2000.geosf3 (geocomp);
+create index dc2000_geosf3_sumlev_idx on dc2000.geosf3 (sumlev);
+
 create unique index dc2000_sf30001_idx on dc2000.sf30001 (stusab, logrecno);
 create unique index dc2000_sf30002_idx on dc2000.sf30002 (stusab, logrecno);
 create unique index dc2000_sf30003_idx on dc2000.sf30003 (stusab, logrecno);

@@ -2,9 +2,12 @@
 #zcat usgeo_uf1.zip | psql -dpropdata -Upostgres -c "copy dc2000.tmp_geoheader from stdin with encoding 'latin1';"
 
 for file in /zdrive/dc2000/sf1/*geo*.zip; do
-    zcat $file | psql -dpropdata -Upostgres -c "copy dc2000.tmp_geoheader from stdin with encoding 'latin1';";
+    zcat $file | psql -dpropdata -Upostgres -c "copy dc2000.tmp_geosf1 from stdin with encoding 'latin1';";
 done;
 
+for file in /zdrive/dc2000/sf3/*geo*.zip; do
+    zcat $file | psql -dpropdata -Upostgres -c "copy dc2000.tmp_geosf3 from stdin with encoding 'latin1';";
+done;
 #/zdrive/dc2000/sf1/akgeo_uf1.zip
 #/zdrive/dc2000/sf1/algeo_uf1.zip
 #/zdrive/dc2000/sf1/argeo_uf1.zip
